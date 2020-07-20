@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Blog implements Serializable {
     private int blogid;  //id
-    private String title; //标题
+    private String tittle; //标题
     private String content; //内容
     private List<String> imgName = new ArrayList<String>();
     private String imgNameStr;
@@ -23,11 +23,11 @@ public class Blog implements Serializable {
     }
 
     public String getTitle() {
-        return title;
+        return tittle;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.tittle = tittle;
     }
 
     public String getContent() {
@@ -89,7 +89,7 @@ public class Blog implements Serializable {
     public String toString() {
         return "Blog{" +
                 "blogid=" + blogid +
-                ", title='" + title + '\'' +
+                ", title='" + tittle + '\'' +
                 ", content='" + content + '\'' +
                 ", imgName=" + imgName +
                 ", imgNameStr='" + imgNameStr + '\'' +
