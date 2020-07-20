@@ -14,20 +14,15 @@ public class Blog implements Serializable {
     private String type;   //类型
     private int commentNum;//评论数
     private int heatNum;  //热度
+    private User user;
+
+
     public int getBlogid() {
         return blogid;
     }
 
     public void setBlogid(int blogid) {
         this.blogid = blogid;
-    }
-
-    public String getTitle() {
-        return tittle;
-    }
-
-    public void setTitle(String title) {
-        this.tittle = tittle;
     }
 
     public String getContent() {
@@ -85,11 +80,28 @@ public class Blog implements Serializable {
     public void setHeatNum(int heatNum) {
         this.heatNum = heatNum;
     }
+
+    public String getTittle() {
+        return tittle;
+    }
+
+    public void setTittle(String tittle) {
+        this.tittle = tittle;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Blog{" +
                 "blogid=" + blogid +
-                ", title='" + tittle + '\'' +
+                ", tittle='" + tittle + '\'' +
                 ", content='" + content + '\'' +
                 ", imgName=" + imgName +
                 ", imgNameStr='" + imgNameStr + '\'' +
@@ -97,6 +109,7 @@ public class Blog implements Serializable {
                 ", type='" + type + '\'' +
                 ", commentNum=" + commentNum +
                 ", heatNum=" + heatNum +
+                ", user=" + user +
                 '}';
     }
 }
